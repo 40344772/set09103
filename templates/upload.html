@@ -1,0 +1,28 @@
+{% extends "teacherMain.html" %}
+{% block content %}
+<p>Set up for buttons uploading a file</p>
+
+<style>
+.button {
+  background-color: #f44336; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+
+<p>Click on the "Choose File" button to upload a file:</p>
+
+<form action="/action_page.php">
+  <input class="button"  type="file" id="myFile" name="filename">
+   <br>
+  <input class="button" type="submit">
+</form>
+
+{% endblock %}}

@@ -1,0 +1,22 @@
+{% extends "mainTeacher.html" %}
+{% block content %}
+
+<p>Put text editor and display file here</p>
+
+<form action="//www.html.am/html-codes/textboxes/submitted.cfm">
+<textarea align="right" name="myTextBox" cols="50" rows="5">
+Enter some text...
+</textarea>
+<br />
+<input type="submit" />
+</form>
+
+<div id="example1"></div>
+<script src="/js/pdfobject.js"></script>
+<script align="left">PDFObject.embed("/pdf/workbook.pdf", "#example1");</script>
+
+<style>
+.pdfobject-container { height: 30rem; border: 1rem solid rgba(0,0,0,.1); }
+</style>
+
+{% endblock %}}

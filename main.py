@@ -44,3 +44,7 @@ def staff_load_page():
 @app.route('/staff/upload')
 def staff_upload_page():
         return render_template('upload.html'), 200
+
+@app.route('/staff/tasks')
+def staff_tasks_page():
+        return render_template('teacherMarking.html'), 200

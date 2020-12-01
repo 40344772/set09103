@@ -54,15 +54,18 @@ input{
 <div class="exactCenter">
 <h1>Napier University Education Site</h1>
 
-<form action="/login" method="POST">
+<form action="/create" method="POST">
 <input type="username" name="username" placeholder="Username">
 <br>
 <input type="password" name="password" placeholder="Password">
 <br>
-<input style="button" type="submit" value="Log in">
+<select type="account" name="account" placeholder="account">
+  <option value="student">Student</option>
+  <option value="staff">Staff</option>
+<br>
+<input style="button" type="submit" value="Create Account">
 </form>
 
-<button style="button" onclick="window.location.href='/account'">New Account</button>
 </div>
 
 </body>

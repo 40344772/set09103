@@ -1,6 +1,5 @@
 {% extends "teacherMain.html" %}
 {% block content %}
-<p>Set up for buttons uploading a file</p>
 
 <style>
 .button {
@@ -17,12 +16,13 @@
 }
 </style>
 
-<p>Click on the "Choose File" button to upload a file:</p>
+<p>Click on the "Choose File" button to upload a file for your students to work on:</p>
 
-<form action="/action_page.php">
-  <input class="button"  type="file" id="myFile" name="filename">
+<form method="POST" action="/upload/file" enctype="multipart/form-data">
+  <input class="button"  type="file" name="fleToUpload" accept=".pdf">
    <br>
   <input class="button" type="submit">
 </form>
+
 
 {% endblock %}}

@@ -1,0 +1,26 @@
+{% extends "teacherMain.html"%}
+{% block content %} 
+
+<textarea id="my-textarea"  name="myTextBox" cols="50" style="width: 50%; max-width: 50%; height: 600px; resize: none; float: right;"></textarea>
+
+<iframe src="https://drive.google.com/file/d/1PU0JscfXNdWw5CyZ7LkEh9IGBYY8SMZr/preview" style="float: left; width: 50%; height: 600px;"></iframe>
+
+<script>
+function download(){
+    var text = document.getElementById("my-textarea").value;
+    text = text.replace(/\n/g, "\r\n");
+    var blob = new Blob([text], {type: "text/plain"});
+    var anchor = document.createElement("a");
+    anchor.download = "staffMarking.txt";
+    anchor.href = window.URL.createObjectURL(blob);
+    anchor.target ="_blank";
+    anchor.style.display = "none";
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+ }
+</script>
+
+<input style="float: right;"  type="submit" onclick="download()" />
+
+{% endblock %}}

@@ -1,0 +1,52 @@
+{% extends "hello.html" %}
+{% block content %}
+
+<style>
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 7px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #f44336;
+}
+</style>
+
+<h2>Work Beginning ...</h2>
+<button class="button" onclick="myFunction()">Display</button>
+
+
+<div id="myDIV">
+{% for item in data %}
+<tr>
+    <td>{{item[0]}}</td>
+    <td>{{item[1]}}</td>
+</tr>
+{% endfor %} 
+</div>
+<br>
+<button class="button" onclick="window.location.href='/student/working'">Work</button>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+{% endblock %}}

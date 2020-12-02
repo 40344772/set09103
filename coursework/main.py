@@ -26,7 +26,6 @@ def Login_page():
 		else:
 			return redirect(url_for('home_page'))
 	else:
-		isLoggedIn = "not logged"
 		return redirect(url_for('home_page'))
 
 @app.route('/account')
@@ -70,7 +69,6 @@ def student_working_page():
 
 @app.route('/staff/home')
 def staff_home_page():
-	loginInCheck(isLoggedIn)
 	return render_template('techerHome.html'), 200
 
 @app.route('/staff/work')
@@ -79,7 +77,6 @@ def staff_work_page():
 
 @app.route('/staff/marking')
 def staff_marking_page():
-	loginInCheck(isLoggedIn)
 	return render_template('submitTeacher.html'), 200
 
 @app.route('/staff/load')
@@ -88,7 +85,6 @@ def staff_load_page():
 
 @app.route('/staff/upload')
 def staff_upload_page():
-	loginInCheck(isLoggedIn)
 	return render_template('upload.html'), 200
 
 @app.route('/upload/file', methods=['POST'])
